@@ -31,11 +31,10 @@ public class Playlist {
         return this;
     }
 
-    public Playlist removeSong(int songIndex) {
+    public void removeSong(int songIndex) {
 
         this.songs.remove(songIndex);
 
-        return this;
     }
 
     public String getList() {
@@ -76,10 +75,6 @@ public class Playlist {
             }
         }
 
-        if (!hasSong) {
-            return songIndex;
-        }
-
         return songIndex;
     }
 
@@ -104,13 +99,13 @@ public class Playlist {
     }
 
     public static String getPlaylistsString() {
-        String output = "";
+        StringBuilder output = new StringBuilder();
 
         for (int i = 0; i < playlists.size(); i++) {
-            output += (i+1) + ": " + playlists.get(i);
-            if (i != playlists.size()-1) output += "\n";
+            output.append((i + 1)).append(": ").append(playlists.get(i));
+            if (i != playlists.size()-1) output.append("\n");
         }
-        return output;
+        return output.toString();
     }
 
     public static int getSize() {

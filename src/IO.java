@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class IO {
-    private static Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
     private static String userString;
     private static int userInt;
 
