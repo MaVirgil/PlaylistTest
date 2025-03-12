@@ -32,9 +32,7 @@ public class Playlist {
     }
 
     public void removeSong(int songIndex) {
-
         this.songs.remove(songIndex);
-
     }
 
     public String getList() {
